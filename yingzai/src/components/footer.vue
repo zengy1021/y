@@ -9,7 +9,7 @@
             style="background:#3d3e40"
             >
             <van-tabbar-item name="home" to='/' icon="wap-home"></van-tabbar-item>
-            <van-tabbar-item name="search" to='/search'  icon="service"></van-tabbar-item>
+            <van-tabbar-item name="search" to='/search'  icon="video"></van-tabbar-item>
             <van-tabbar-item name="like" to='/like'  icon="like"></van-tabbar-item>
             <van-tabbar-item name="self" to='/self'  icon="manager"></van-tabbar-item>
         </van-tabbar>

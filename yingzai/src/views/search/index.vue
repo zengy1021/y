@@ -1,6 +1,6 @@
 <template>
-    <div class="hasFooter minView">
-        search
+    <div class="hasFooter hasNav minView">
+        <NavBarComponent :leftArrow="false" :title="'环环相扣'" />
         <Footer  :active="{name:'search'}" />
     </div>
 </template>

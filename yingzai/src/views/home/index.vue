@@ -29,8 +29,8 @@
               <div class="van-icon van-icon-arrow van-cell__right-icon"></div>
             </van-tag>
           </div>
-          <HotMovie v-show="currentMode==='1'" :movie-mode="'1'"/>
-          <HotMovie v-show="currentMode==='2'" :movie-mode="'2'"/>
+            <HotMovie v-show="currentMode==='2'" :movie-mode="'2'"/>
+            <HotMovie v-show="currentMode==='1'" :movie-mode="'1'"/>
         </div>
         <Footer :active="{name:'home'}" />
     </div>

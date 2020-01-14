@@ -1,5 +1,6 @@
 <template>
     <div>
+       <van-skeleton title :row="5" :loading="loading">
         <div class="content">
             <div class="scrollBox">
                 <div class="box" v-for="(item,index) in hotList" :key="index">
@@ -34,6 +35,7 @@
                 </div>
             </div>
         </div>
+          </van-skeleton>
     </div>
 </template>
 <script>
@@ -49,7 +51,8 @@ export default {
   },
   data () {
     return {
-      hotList: []
+      hotList: [],
+      loading: true
     }
   },
   watch: {
@@ -95,6 +98,7 @@ export default {
             this.hotList.push([])
           }
         })
+        this.loading = false
       }
     },
     formatUpdateTime (time) {
