@@ -8,13 +8,15 @@
         <div class="content">
           <div style="padding: .625rem 1rem;">
             <van-swipe :autoplay="3000" class="loop" >
-              <van-swipe-item  v-for="(image, index) in images" :key="index">
+              <van-swipe-item  v-for="(image, index) in images" :key="index" class="loopItem">
                 <van-image
                   fit="cover"
                   lazy-load
-                  :width="'100%'"
+                  :width="'90%'"
                   height="200"
                   :src="`/img/${image}`"
+
+                  class="loopImg"
                 />
               </van-swipe-item>
             </van-swipe>
@@ -84,7 +86,15 @@ export default {
     // background:gold;
     .loop{
       box-sizing: border-box;
-      border-radius: .5rem;
+      // border-radius: .5rem;
+      padding-left:5%;
+      .loopItem{
+        width: 90%;
+        .loopImg{
+          border-radius: .5rem;
+          overflow: hidden;
+        }
+      }
     }
     .movie{
       padding: .625rem 0;

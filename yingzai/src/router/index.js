@@ -28,6 +28,11 @@ const routes = [
     path: '/like',
     name: 'Like',
     component: () => import(/* webpackChunkName: "about" */ '../views/like/index.vue')
+  },
+  {
+    path: '/movieDetail/:id',
+    name: 'MovieDetail',
+    component: () => import(/* webpackChunkName: "about" */ '../views/home/movieDetail.vue')
   }
 ]
 

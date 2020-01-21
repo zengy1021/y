@@ -10,7 +10,7 @@
         >
             <van-icon
               v-if="rightEventObj"
-              name="plus"
+              :name="rightEventObj.type"
               slot="right"
               color="#a9adb0"
               size="1.25rem"
@@ -52,6 +52,9 @@ export default {
         case 'add':
           this.addNewLog()
           break
+        case 'share':
+          this.shareOther()
+          break
         default:
           this.nullEvent()
           break
@@ -59,6 +62,9 @@ export default {
     },
     addNewLog () {
       console.log('新增日记')
+    },
+    shareOther () {
+      console.log('分享影片')
     },
     nullEvent () {
       console.log('null事件')

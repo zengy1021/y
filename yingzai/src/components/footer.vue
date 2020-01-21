@@ -2,7 +2,7 @@
     <div>
         <van-tabbar
             v-model="active.name"
-            active-color="#507fb5"
+            active-color="rgb(200, 240, 25)"
             inactive-color="#7e807f"
             safe-area-inset-bottom
             :border="false"

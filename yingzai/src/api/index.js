@@ -42,6 +42,10 @@ const api = { // 调用其他外部api
       }
       return axios.get(this._formatGetParmasRequest('https://douban.uieee.com/v2/movie/coming_soon', parmas))
     }
+  },
+  // 获取电影详情  根据电影id
+  getMoiveDetailById (id) {
+    return axios.get(`https://douban.uieee.com/v2/movie/subject/${id}`)
   }
 }
 export default _.merge(api, api1)

@@ -3,7 +3,11 @@
        <van-skeleton title :row="5" :loading="loading">
         <div class="content">
             <div class="scrollBox">
-                <div class="box" v-for="(item,index) in hotList" :key="index">
+                <div
+class="box"
+v-for="(item,index) in hotList"
+:key="index"
+@click="goDetail(item.id)">
                         <div class="movieImg" v-if="item.images">
                             <van-image
                                 fit="cover"
@@ -77,7 +81,6 @@ export default {
         count: 10
       }
       let res = {}
-
       if (this.movieMode === '1') {
         res = await api.getHotMovieList(obj)
       } else {
@@ -120,6 +123,13 @@ export default {
         }
       })
       return `${str}上映`
+    },
+    goDetail (id) {
+      // console.log(id)
+
+      this.$router.push({
+        path: `/movieDetail/${id}`
+      })
     }
   }
 }
